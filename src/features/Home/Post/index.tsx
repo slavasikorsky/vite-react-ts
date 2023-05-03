@@ -5,7 +5,7 @@ import IPost from "../../../types/types";
 const Card = styled.div`
 	border: 1px solid #c2c3c4;
 	padding: 10px 12px;
-	width: calc(25% - 20px);
+	width: calc(50% - 20px / 2);
 	border-radius: 6px;
 `;
 
