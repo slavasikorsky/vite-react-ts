@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import NavItem from "./NavItem";
+import { IMenuItem } from "../../../types/types";
 
 type NavListProps = {
-	dataList: { url: string; text: string }[];
+	dataList: IMenuItem[];
 };
 
 const NavListBlock = styled.ul`

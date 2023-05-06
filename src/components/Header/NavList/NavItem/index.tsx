@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
-type NavItemProps = {
-	url: string;
-	text: string;
-};
+import { IMenuItem } from "../../../../types/types";
 
 const NavbarItem = styled(Link)`
 	font-size: 1rem;
@@ -12,7 +8,7 @@ const NavbarItem = styled(Link)`
 	margin: 0 20px;
 `;
 
-function NavItem({ url, text }: NavItemProps) {
+function NavItem({ url, text }: IMenuItem) {
 	return <NavbarItem to={url}>{text}</NavbarItem>;
 }
 
