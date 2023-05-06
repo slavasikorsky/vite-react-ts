@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { decrement, increment, goToPage } from "../../../store/counterSlice";
-import { RootState } from "../../../store/store";
-import Button from "../../../components/Button";
+import { decrement, increment, goToPage } from "../../store/counterSlice";
+import { RootState } from "../../store/store";
+import Button from "../Button";
 
 interface IPagination {
 	pageCount: number;

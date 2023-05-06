@@ -1,12 +1,10 @@
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
 import styled from "styled-components";
 import useAxios from "../../hooks/useAxios";
 import IPost from "../../types/types";
-import { RootState } from "../../store/store";
-import Post from "./Post";
+import Post from "../../components/Post";
 import Container from "../../components/Container";
-import Pagination from "./Pagination";
+import CTA from "../../components/CTA";
 
 const CardsWrapper = styled.div`
 	display: flex;
@@ -15,24 +13,27 @@ const CardsWrapper = styled.div`
 `;
 
 function Home() {
-	const count = useSelector((state: RootState) => state.counter.value);
-
 	const URL = "https://jsonplaceholder.typicode.com";
-	const pageCount = 10;
-	const postsLength = 100;
+	const pageCount = 4;
 	const { response, loading, error, sendData } = useAxios({
 		method: "GET",
 		baseURL: URL,
-		url: `/posts?_start=${count}&_limit=10`,
+		url: `/posts?_start=0&_limit=${pageCount}`,
 	});
 
 	useEffect(() => {
 		sendData();
-	}, [count]);
+	}, []);
 
 	return (
 		<Container>
-			<h3>Posts</h3>
+			<h1>Home page</h1>
+			<CTA
+				heading="Lorem ipsum"
+				text="default text"
+				buttonUrl="http://google.com/"
+				buttonLabel="Link"
+			/>
 			<>
 				{loading && <p>Loading...</p>}
 				{error && <p>{error.message}</p>}
@@ -47,7 +48,6 @@ function Home() {
 						))}
 					</CardsWrapper>
 				)}
-				<Pagination pageCount={pageCount} postsLength={postsLength} />
 			</>
 		</Container>
 	);
