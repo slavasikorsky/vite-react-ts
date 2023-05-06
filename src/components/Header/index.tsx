@@ -10,8 +10,8 @@ function Header() {
 			text: "Home",
 		},
 		{
-			url: "/about",
-			text: "About us",
+			url: "/blog",
+			text: "Blog",
 		},
 		{
 			url: "/404",
