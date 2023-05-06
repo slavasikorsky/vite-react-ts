@@ -1,15 +1,29 @@
 import logo from "../../assets/react.svg";
 import Container from "../Container";
 import Wrapper from "../Wrapper";
-import Menu from "./Menu";
+import NavList from "./NavList";
 
 function Header() {
+	const menu = [
+		{
+			url: "/",
+			text: "Home",
+		},
+		{
+			url: "/about",
+			text: "About us",
+		},
+		{
+			url: "/404",
+			text: "Not Found",
+		},
+	];
 	return (
 		<header style={{ margin: "20px 0" }}>
 			<Container>
 				<Wrapper>
 					<img src={logo} alt="logo" />
-					<Menu />
+					<NavList dataList={menu} />
 					<span>Vite + React TS</span>
 				</Wrapper>
 			</Container>

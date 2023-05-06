@@ -33,16 +33,22 @@ function Home() {
 	return (
 		<Container>
 			<h3>Posts</h3>
-			{loading && <p>Loading...</p>}
-			{error && <p>{error.message}</p>}
-			{!loading && !error && (
-				<CardsWrapper>
-					{response?.data.map((item: IPost) => (
-						<Post key={item.id} id={item.id} title={item.title} />
-					))}
-				</CardsWrapper>
-			)}
-			<Pagination pageCount={pageCount} postsLength={postsLength} />
+			<>
+				{loading && <p>Loading...</p>}
+				{error && <p>{error.message}</p>}
+				{!loading && !error && (
+					<CardsWrapper>
+						{response?.data.map((item: IPost) => (
+							<Post
+								key={item.id}
+								id={item.id}
+								title={item.title}
+							/>
+						))}
+					</CardsWrapper>
+				)}
+				<Pagination pageCount={pageCount} postsLength={postsLength} />
+			</>
 		</Container>
 	);
 }

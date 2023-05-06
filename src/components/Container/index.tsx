@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 type ContainerProps = {
-	children: JSX.Element | JSX.Element[];
+	children: JSX.Element | JSX.Element[] | any;
 };
 
 const Block = styled.div`

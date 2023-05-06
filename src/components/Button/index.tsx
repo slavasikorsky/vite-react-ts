@@ -21,7 +21,7 @@ const ButtonElement = styled.button`
 	}
 `;
 
-type ButtonProps = (props: Props) => JSX.Element;
+type ButtonProps = Props;
 
 function Button({ children, onClick, ...rest }: ButtonProps) {
 	return (
@@ -32,3 +32,8 @@ function Button({ children, onClick, ...rest }: ButtonProps) {
 }
 
 export default Button;
+
+Button.defaultProps = {
+	onClick: false,
+	rest: null,
+};

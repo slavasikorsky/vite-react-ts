@@ -4,8 +4,8 @@ import useAxios from "../../hooks/useAxios";
 import Container from "../../components/Container";
 
 function PostPage() {
-	const routeParams = useParams();
-	const id = parseInt(routeParams.id, 10);
+	const routeParams = useParams<{ id: string | undefined }>();
+	const id = routeParams.id ? parseInt(routeParams.id, 10) : undefined;
 
 	const URL = "https://jsonplaceholder.typicode.com";
 	const { response, loading, error, sendData } = useAxios({
@@ -15,20 +15,22 @@ function PostPage() {
 	});
 
 	useEffect(() => {
-		sendData();
-	}, [sendData]);
+		if (id) {
+			sendData();
+		}
+	}, [id, sendData]);
 
 	return (
-		<>
+		<Container>
 			{loading && <p>Loading...</p>}
 			{error && <p>{error.message}</p>}
 			{!loading && !error && (
-				<Container>
+				<>
 					<h3>{response?.data.title}</h3>
 					<p>{response?.data.body}</p>
-				</Container>
+				</>
 			)}
-		</>
+		</Container>
 	);
 }
 
