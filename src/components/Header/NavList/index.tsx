@@ -16,7 +16,7 @@ function NavList({ dataList }: NavListProps) {
 	return (
 		<NavListBlock>
 			{dataList.map((item) => (
-				<NavItem url={item.url} text={item.text} />
+				<NavItem key={item.text} url={item.url} text={item.text} />
 			))}
 		</NavListBlock>
 	);

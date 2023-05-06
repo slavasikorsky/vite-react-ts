@@ -9,7 +9,11 @@ const NavbarItem = styled(Link)`
 `;
 
 function NavItem({ url, text }: IMenuItem) {
-	return <NavbarItem to={url}>{text}</NavbarItem>;
+	return (
+		<NavbarItem key={text} to={url}>
+			{text}
+		</NavbarItem>
+	);
 }
 
 export default NavItem;
