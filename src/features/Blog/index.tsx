@@ -4,7 +4,7 @@ import styled from "styled-components";
 import useAxios from "../../hooks/useAxios";
 import IPost from "../../types/types";
 import { RootState } from "../../store/store";
-import Post from "../../components/Post";
+import Post from "../../components/Card";
 import Container from "../../components/Container";
 import Pagination from "../../components/Pagination";
 

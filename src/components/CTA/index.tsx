@@ -9,7 +9,7 @@ type CTAProps = {
 };
 
 const CTABlock = styled.div`
-	margin: 20px;
+	margin: 20px 0;
 	padding: 40px 20px;
 	border: 1px solid #ccc;
 	background-color: #646cff;

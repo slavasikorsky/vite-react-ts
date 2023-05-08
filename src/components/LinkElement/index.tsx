@@ -38,6 +38,6 @@ function LinkBlock({ link, children, onClick, ...rest }: LinkProps) {
 export default LinkBlock;
 
 LinkBlock.defaultProps = {
-	onClick: false,
+	onClick: null,
 	rest: null,
 };
