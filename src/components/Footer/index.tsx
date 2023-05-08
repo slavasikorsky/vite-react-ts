@@ -5,8 +5,6 @@ import Wrapper from "../Wrapper";
 const FooterContainer = styled.div`
 	margin: 30px 0 0;
 	padding: 20px;
-	background-color: #000;
-	color: #fff;
 `;
 
 function Footer() {
