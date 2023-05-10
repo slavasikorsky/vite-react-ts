@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import LinkBlock from "../LinkElement";
+import { useState } from "react";
+import Popup from "../Popup";
+import Form from "../Form";
 
 type CTAProps = {
 	heading: string;
 	text: string;
-	buttonUrl?: string;
 	buttonLabel?: string;
 };
 
@@ -17,22 +18,34 @@ const CTABlock = styled.div`
 	border-radius: 5px;
 `;
 
-function CTA({ heading, text, buttonUrl, buttonLabel }: CTAProps) {
+function CTA({ heading, text, buttonLabel }: CTAProps) {
+	const [openPopup, setOpenPopup] = useState(false);
 	return (
-		<CTABlock>
-			<h3>{heading}</h3>
-			<p>{text}</p>
-			<br />
-			{buttonUrl && buttonLabel && (
-				<LinkBlock link={buttonUrl}>{buttonLabel}</LinkBlock>
-			)}
-		</CTABlock>
+		<>
+			<CTABlock>
+				<h3>{heading}</h3>
+				<p>{text}</p>
+				<br />
+				{buttonLabel && (
+					<button
+						type="button"
+						onClick={() => {
+							setOpenPopup(!openPopup);
+						}}
+					>
+						{buttonLabel}
+					</button>
+				)}
+			</CTABlock>
+			<Popup trigger={openPopup} setTrigger={setOpenPopup}>
+				<Form />
+			</Popup>
+		</>
 	);
 }
 
 export default CTA;
 
 CTA.defaultProps = {
-	buttonUrl: null,
 	buttonLabel: null,
 };
