@@ -5,25 +5,12 @@ import Wrapper from "../Wrapper";
 import NavList from "./NavList";
 import { RootState } from "../../store/store";
 import { changeTheme } from "../../store/themeSlice";
+import menu from "../../data/menu";
 
 function Header() {
 	const theme = useSelector((state: RootState) => state.theme.value.mode);
 	const dispatch = useDispatch();
 
-	const menu = [
-		{
-			url: "/",
-			text: "Home",
-		},
-		{
-			url: "/blog",
-			text: "Blog",
-		},
-		{
-			url: "/404",
-			text: "Not Found",
-		},
-	];
 	return (
 		<header style={{ padding: "20px 0" }}>
 			<Container>
