@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { darkTheme, lightTheme } from "../../data/theme";
 import logo from "../../assets/react.svg";
 import Container from "../Container";
 import Wrapper from "../Wrapper";
@@ -22,8 +23,10 @@ function Header() {
 						value={theme}
 						onChange={(e) => dispatch(changeTheme(e.target.value))}
 					>
-						<option value="light">light</option>
-						<option value="dark">dark</option>
+						<option value={darkTheme.mode}>{darkTheme.mode}</option>
+						<option value={lightTheme.mode}>
+							{lightTheme.mode}
+						</option>
 					</select>
 				</Wrapper>
 			</Container>
