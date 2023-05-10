@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 interface Props {
 	link: string;
-	children: string;
+	children: JSX.Element | JSX.Element[] | string | undefined;
 	onClick?: () => void;
 	rest?: JSX.Element | JSX.Element[];
 }
