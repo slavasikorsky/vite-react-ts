@@ -14,7 +14,7 @@ function Card({ id, title }: IPost) {
 		<CardItem key={id}>
 			<small>id: {id}</small>
 			<h5>{title}</h5>
-			<Link to={`post/${id}`}>Read more</Link>
+			<Link to={`/post/${id}`}>Read more</Link>
 		</CardItem>
 	);
 }

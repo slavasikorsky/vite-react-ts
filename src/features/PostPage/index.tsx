@@ -22,14 +22,13 @@ function PostPage() {
 
 	return (
 		<Container>
-			{JSON.stringify(routeParams)}
 			{loading && <p>Loading...</p>}
 			{error && <p>{error.message}</p>}
 			{!loading && !error && (
 				<>
 					<h3>{response?.data.title}</h3>
 					<p>{response?.data.body}</p>
-					<span>USER ID: {response?.data.userId}</span>
+					<span>Author: {response?.data.userId}</span>
 				</>
 			)}
 		</Container>
