@@ -1,12 +1,12 @@
-
 # Vite + React TS test app
 
-- Test components and features
-- Custom hook with API fetch
-- Redux toolkit state
-- Router with 404 page and post page
-- styled-component
-- eslint + prettier
+# Homework 2
+
+-   Layout with header/footer
+-   Custom components Hero, CTA, Form, Slider etc.
+-   Form with validation
+-   Redux toolkit change color theme
+-   Pages - About, Blog, Post, 404, Home, Contact
 
 run:
 
