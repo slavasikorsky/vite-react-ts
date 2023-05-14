@@ -34,14 +34,32 @@ body {
 	min-height: 100vh;
 }
 
+label {
+	margin: 10px 0 0;
+	cursor: pointer;
+}
+
 input {
+	display: block;
+	min-width: 200px;
 	height: 40px;
 	padding: 12px 5px;
+	margin: 10px 0 0;
 	color: #fff;
 	background-color: #424242;
+	border-radius: 5px;
+	outline: none;
 }
 input::placeholder {
 	color: #fff;
+}
+
+input:invalid[focused="true"] {
+	border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ span {
+	display: block;
 }
 
 button {
@@ -50,4 +68,5 @@ button {
 	color: #fff;
 	padding: 5px 12px;
 	cursor: pointer;
+	background-color: #242424;
 }

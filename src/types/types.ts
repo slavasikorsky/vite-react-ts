@@ -10,9 +10,26 @@ export interface IMenuItem {
 	text: string;
 }
 
+export interface ISocialItem {
+	url: string;
+	name: string;
+}
+
 export interface ValidationProps {
 	isEmpty?: boolean;
 	minLength?: number;
 	isEmail?: boolean;
 	isPhone?: boolean;
+}
+
+export interface IInputItem {
+	id: number;
+	name: string;
+	type: string;
+	placeholder: string;
+	errorMessage?: string;
+	label: string;
+	pattern?: string;
+	required: boolean;
+	value?: string;
 }
