@@ -7,9 +7,10 @@ function Home() {
 		<Container>
 			<h1>Home page</h1>
 			<CTA
+				color="#000"
+				backgroundColor="#97fdfb"
 				heading="Lorem ipsum"
 				text="default text"
-				buttonUrl="http://google.com/"
 				buttonLabel="Link"
 			/>
 			<FeaturedPosts postsCount={4} />

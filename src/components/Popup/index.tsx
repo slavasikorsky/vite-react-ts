@@ -25,7 +25,7 @@ const PopupContent = styled.div`
 	transform: translate(-50%, -50%);
 	width: 400px;
 	z-index: 2;
-	background-color: #fff;
+	background-color: ${(props) => props.theme.value.PRIMARY_BG_COLOR};
 	padding: 20px;
 `;
 
