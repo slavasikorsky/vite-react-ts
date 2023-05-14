@@ -8,6 +8,10 @@ const menu = [
 		text: "About",
 	},
 	{
+		url: "/contact",
+		text: "Contact",
+	},
+	{
 		url: "/blog",
 		text: "Blog",
 	},

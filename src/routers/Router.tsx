@@ -5,6 +5,7 @@ import NotFound from "../features/NotFound";
 import Layout from "../layout/layout";
 import Blog from "../features/Blog";
 import About from "../features/About";
+import Contact from "../features/Contact";
 
 function Router() {
 	return (
@@ -13,6 +14,7 @@ function Router() {
 				<Route path="/" index element={<Home />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/blog" element={<Blog />} />
+				<Route path="/contact" element={<Contact />} />
 				<Route path="/post/:id" element={<PostPage />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
